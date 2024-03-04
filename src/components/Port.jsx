@@ -10,7 +10,7 @@ import port07 from "../assets/img/port07.jpg";
 import port08 from "../assets/img/port08.jpg";
 
 import { gsap } from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollTrigger } from 'gsap/ScrollTrigger'; // GSAP의 ScrollTrigger 모듈을 가져옴
 
 const portText = [
   {
@@ -95,19 +95,19 @@ const Port = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     const horizontal = horizontalRef.current;
-    const sections = sectionRef.current;
+    const sections = sectionRef.current; // article의 모든 요소들을 선택하여 sections 배열에 저장
     
     let scrollTween = gsap.to(sections, {
-      xPercent: -120 * (sections.length - 1),
+      xPercent: -120 * (sections.length - 1), // 요소들을 가로 방향으로 배치하기 위해 xPercent 속성 사용, 스크롤되면 120% 만큼 이동
       ease: "none",
       scrollTrigger: {
-        trigger: horizontal,
-        start: "top 56px",
-        end : () => "+=" + horizontal.offsetWidth,
-        pin: true,
-        scrub: 1,
+        trigger: horizontal, // 애니메이션이 시작할 트리거 요소로 #port을 설정
+        start: "top 56px",   // 트리거 요소의 상단에서 56px 아래에서 시작
+        end : () => "+=" + horizontal.offsetWidth, // 트리거 요소의 아래에서 #port의 넓이 아래에서 끝
+        pin: true,           // 애니메이션이 스크롤 범위 동안 고정
+        scrub: 1,            // 스크롤 시 애니메이션 속도에 비례하게 애니메이션 진행
         markers: false,
-        invalidateOnRefresh: true,
+        invalidateOnRefresh: true, // 페이지 리프레시 시 ScrollTrigger 캐시를 재설정
         anticipatePin: 1
       }
     })
