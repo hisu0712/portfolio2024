@@ -106,11 +106,10 @@ const Port = () => {
         end : () => "+=" + horizontal.offsetWidth, // 트리거 요소의 아래에서 #port의 넓이 아래에서 끝
         pin: true,           // 애니메이션이 스크롤 범위 동안 고정
         scrub: 1,            // 스크롤 시 애니메이션 속도에 비례하게 애니메이션 진행
-        markers: false,
         invalidateOnRefresh: true, // 페이지 리프레시 시 ScrollTrigger 캐시를 재설정
         anticipatePin: 1
-      }
-    })
+      },
+    });
 
     return () => {
       scrollTween.kill();
