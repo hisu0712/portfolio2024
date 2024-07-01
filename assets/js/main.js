@@ -194,5 +194,7 @@ $(".sc-project .content-link").on('mouseenter', function() {
 
 // 새로고침
 window.onresize = function(){
-  document.location.reload();
+  if (window.matchMedia("(min-width: 769px)").matches) {
+    document.location.reload();
+  }
 };
