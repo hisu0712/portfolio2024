@@ -450,6 +450,7 @@ body::-webkit-scrollbar-track {
   letter-spacing: 1px;
   white-space: nowrap;
   line-height: 1;
+  z-index: 10;
 }
 @media (min-width: 991px) and (max-width: 1240px) {
   .sc-visual .inner .main-text, .sc-visual .inner .name-text {
@@ -513,6 +514,7 @@ body::-webkit-scrollbar-track {
   position: absolute;
   right: 0;
   left: 0;
+  z-index: 1;
 }
 @media (max-width: 991px) {
   .sc-visual .inner .main-video {
