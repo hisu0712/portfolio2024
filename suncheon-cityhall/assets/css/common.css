@@ -1,0 +1,77 @@
+html {
+    overflow: auto;
+}
+
+body {
+    -webkit-text-size-adjust: none;
+    font-family: Malgun gothic, Dotum, arial, sans-serif;
+    color: #666;
+    letter-spacing: -0.5px;
+}
+
+.blind {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    clip: rect(0,0,0,0);
+    margin: -1px;
+}
+
+#skip-nav {
+    position: absolute;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+}
+#skip-nav a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    background: #000;
+    transform: translateY(-100%);
+}
+#skip-nav a:focus,
+#skip-nav a:active {
+    transform: translateY(0);
+}
+
+/* hoverLineAni */
+.hoverLineAni::before {
+    content: "";
+    position: absolute;
+    right: 50%; bottom: 0;
+    width: 0;
+    height: 2px;
+    transition: all .3s;
+}
+.hoverLineAni::after {
+    content: "";
+    position: absolute;
+    left: 50%; bottom: 0;
+    width: 0;
+    height: 2px;
+    transition: all .3s;
+}
+.sc-banner .hoverLineAni::before, .sc-banner .hoverLineAni::after {
+    background-color: #fff;
+}
+.sc-banner .hoverLineAni:hover::before, .sc-banner .hoverLineAni:hover::after {
+    width: 18px;
+}
+.sc-menu .hoverLineAni::before, .sc-menu .hoverLineAni::after {
+    background-color: #000;
+}
+.sc-menu .hoverLineAni:hover::before, .sc-menu .hoverLineAni:hover::after {
+    width: 12px;
+}
+.sc-link .hoverLineAni::before, .sc-link .hoverLineAni::after {
+    background-color: #5a75cc;
+}
+.sc-link .hoverLineAni:hover::before, .sc-link .hoverLineAni:hover::after {
+    width: 11px;
+}
