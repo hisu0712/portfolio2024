@@ -1,0 +1,83 @@
+.btn-cta {
+    background-color: var(--swatch--accentbis);
+    letter-spacing: -.03rem;
+    border-radius: 4px;
+    padding: 0 .7rem;
+    transition: all .2s;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    will-change: width, height;
+
+    .btn-cta-text {
+        position: relative;
+        z-index: 1;
+        font-size: 1.125rem;
+        font-variation-settings: "wght" 103;
+        line-height: 1;
+        overflow: hidden;
+        padding: 1.2rem 0;
+        min-width: 107px;
+        min-height: 56.55px;
+        &.size-s {min-width: 62px;}
+        
+        .text {
+            display: block; 
+            position: absolute;
+            top: 50%; 
+            transform: translateY(-50%);
+            transition: 0.2s;
+        }
+        .clone-text {
+            display: block;
+            position: absolute;
+            top: 100%;
+            transition: 0.2s;
+        }
+    }
+    .btn-cta-arrow {
+        z-index: 1;
+        margin-left: .5rem;
+        height: 1rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        width: 24px;
+        height: 24px;
+
+        img { object-fit: contain; }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: 0.2s;
+        }
+        .clone-arrow {
+            position: absolute;
+            top: 100%;
+            right: 100%;
+            transition: 0.2s;
+        }
+    }
+    .btn-cta-bg {
+        position: absolute;
+        width: 100%;
+        height: 0%;
+        top: auto; bottom: 0; left: 0; right: auto;
+        background-color: #2407a3;
+        transition: 0.3s;
+    }
+    &:hover {
+        .btn-cta-bg { height: 100%; }
+        .btn-cta-text {
+            .text { top: -100%; }
+            .clone-text { top: 50%; transform: translateY(-50%); }
+        }
+        .btn-cta-arrow {
+            .arrow { top: -100%; right: -100%; }
+            .clone-arrow { top: 50%; right: 0; transform: translateY(-50%); }
+        }
+    }
+}

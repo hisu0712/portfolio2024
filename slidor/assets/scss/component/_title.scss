@@ -1,0 +1,61 @@
+.headline {
+    color: var(--swatch--white);
+    
+    &.type1 {
+        letter-spacing: -.2vw;
+        max-width: max(44vw,43rem);
+        font-size: max(4rem,4.4vw);
+        line-height: 85%;
+        font-weight: 110;
+        background: linear-gradient(to bottom, #9B9B9B 0%, #ffffff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        @include laptop() {
+            max-width: 37rem;
+            font-size: 3.3rem;
+        }
+        @include tablet() {
+            max-width: 35rem;
+            font-size: 3rem;
+        }
+        @include mobile() {
+            font-size: max(11vw,2.5rem);  
+        }
+    }
+    &.type2 {
+        letter-spacing: -.08rem;
+        font-size: 3.5rem;
+        line-height: 95%;
+        font-weight: 100;
+        @include tablet() {
+            font-size: 2.9rem;
+        }
+        @include mobile() {
+            font-size: 2.4rem;
+        }
+
+        .gradient {
+            background-image: linear-gradient(to right, #FF4835, #3D1EC7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+strong.title {
+    &.type1 {
+        font-variation-settings: "wght" 100;
+        letter-spacing: -.01rem;
+        font-size: 1.75rem;
+        font-weight: 500;
+        line-height: 115%;
+        @include tablet() {
+            font-size: 1.5rem;
+            line-height: 110%;
+        }
+        @include mobile() {
+            text-wrap: balance;
+            font-size: 1.3rem;
+        }
+    }
+}

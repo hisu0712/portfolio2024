@@ -1,0 +1,38 @@
+.blind {
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+}
+
+.padding-ori {
+    padding-right: var(--padding-desktop);
+    padding-left: var(--padding-desktop);
+
+    @media (max-width: 767px) {
+            padding-right: var(--padding-mobile);
+            padding-left: var(--padding-mobile);
+    }
+}
+
+.text-size-20 {
+    opacity: .7;
+    font-variation-settings: "wght" 90;
+    font-size: 1.25rem;
+    line-height: 125%;
+
+    @media (max-width: 767px) {
+        font-size: 1.125rem;
+        line-height: 130%;
+    }
+}
+
+// max-width
+.max-width-48 { max-width: 48rem; }
+.max-width-42 { max-width: 42rem; }
+.max-width-40 { max-width: 40rem; }
+.max-width-32 { max-width: 32rem; }
+.max-width-30 { max-width: 30rem; }
+.max-width-26 { max-width: 26rem; }
+.max-width-20 { max-width: 20rem; }
