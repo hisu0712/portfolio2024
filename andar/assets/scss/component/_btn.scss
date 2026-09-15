@@ -1,0 +1,21 @@
+.btn-more {
+    padding: 16px 0;
+    border: 1px solid #C8CBD2;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    @include flex-center;
+    // 나중에 조정가능성 있음
+    margin: 0 16px 60px;
+    width: calc(100% - 32px);
+
+    strong {
+        color: #C86733;
+        margin-right: 5px;
+    }
+    &::after {
+        content: url(../images/main/arrow_right.png);
+        margin-top: 1px;
+    }
+}

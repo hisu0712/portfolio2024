@@ -1,0 +1,209 @@
+#footer {
+    background: #fafafa;
+    padding: 30px 16px 30px;
+    line-height: 20px;
+    color: #555;
+
+    .logo-area {
+        .logo {
+            display: block;
+            width: 90px;
+            padding-bottom: 10px;
+
+            img {
+                width: 100%;
+            }
+        }
+        .text {
+            line-height: 20px;
+        }
+    }
+    .customer-area {
+        padding: 24px 0 20px;
+
+        .title {
+            display: block;
+            font-size: 13px;
+            line-height: 16px;
+            font-weight: 500;
+            padding-bottom: 5px;
+        }
+        a {
+            display: block;
+            font-size: 18px;
+            line-height: 21px;
+            font-weight: 700;
+            padding-bottom: 10px;
+        }
+        .time {
+            font-size: 13px;
+            line-height: 16px;
+        }
+        .time + .time {
+            padding-top: 5px;
+        }
+    }
+    .sns-area {
+        ul {
+            display: flex;
+
+            li {
+                margin-right: 25px;
+
+                img {
+                    height: 22px;
+                }
+            }
+        }
+    }
+    .terms-area {
+        padding: 12px 0;
+
+        ul {
+            li {
+                position: relative;
+                display: inline-block;
+                padding-right: 10px;
+                margin-right: 5px;
+                
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    width: 1px;
+                    height: 10px;
+                    background: #ccc;
+                }
+                a {
+                    font-size: 12px;
+                    line-height: 1.7;
+                    color: #777;
+                    padding: 4px 0;
+                }
+            }
+        }
+    }
+    .addr-area {
+        display: inline-block;
+        font-size: 11px;
+        line-height: 13px;
+        font-weight: 400;
+        color: #777;
+
+        .addr {
+            padding: 4px 0;
+
+            span + span {
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    width: 1px;
+                    height: 10px;
+                    background: #ccc;
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+    .copy {
+        display: block;
+        font-size: 11px;
+        line-height: 13px;
+        letter-spacing: -0.02em;
+        color: #777;
+        padding-top: 30px;
+    }
+    .support-area {
+        display: flex;
+        margin-top: 24px;
+
+        li:first-child {
+            a {
+                display: block;
+                width: 45px;
+            }
+        }
+
+        li {
+            margin-right: 22px;
+
+            a {
+                display: block;
+            }
+            &:nth-child(1) {
+                a {
+                    width: 45px; 
+                }
+            }
+            &:nth-child(2) {
+                a {
+                    width: 34px; 
+                }
+            }
+            &:nth-child(3) {
+                a {
+                    width: 27px; 
+                }
+            }
+        }
+
+    }
+
+    .quick {
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        right: 10px;
+        bottom: 50px;
+        z-index: 20;
+        width: 50px;
+        border: 1px solid #e9e9e9;
+        background-color: rgba(255,255,255,0.7);
+        transition: .4s;
+
+        &.on {
+            opacity: 1;
+            visibility: visible;
+        }
+        li + li {
+            border-top: 1px solid #e9e9e9;
+        }
+        li {
+            padding: 5px;
+
+            &.kakao {
+                a {
+                    display: block;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    height: 30px;
+                    background-image: url(../images/layout/kakao.png);
+                    background-size: 35px 30px;
+                    margin-top: 4px;
+                }
+                .text {
+                    padding-top: 10px;
+                    font-size: 11px;
+                    line-height: 13px;
+                    letter-spacing: -0.04em;
+                    font-weight: 500;
+                    color: #595959;
+                    text-align: center;
+                }
+            }
+            &.up {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    margin: 12px auto;
+                    width: 19px;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
