@@ -1,0 +1,26 @@
+.headline {
+    font-size: 42px;
+    line-height: 60px;
+    color: #aaa;
+    margin-bottom: 48px;
+    @include tablet() {                   
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 24px;
+    }
+    &.type_c {
+        @include tablet() {      
+            max-width: 300px;             
+        }
+    }
+    .black-item { 
+        color: #1e1e1e; 
+    }
+    .block-item { 
+        display: block; 
+        @include tablet() {   
+            display: inline;                
+        }
+    }
+}    
+    

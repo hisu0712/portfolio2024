@@ -1,0 +1,67 @@
+.link-btn {
+    display: inline-block;
+    line-height: 54px;
+    padding: 0 40px;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 15px;
+    transition: 0.3s;
+    @include tablet() {                   
+        font-size: 14px;
+    }
+
+    &.type1 {
+        color: #fff;
+        background: #1e1e1e;
+        @include tablet() {                   
+            position: relative;
+            padding: 0 44px 0 26px; 
+        }
+
+        &:hover { background: #117ce9; }
+        &::after {
+            content: '';
+            display: none;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            background: url("../images/main/btn-link-arrow.png") no-repeat center;
+            background-size: cover;
+            @include tablet() { 
+                display: block;                  
+            }
+        }
+    }
+    &.type2 {
+        color: #1e1e1e;
+        border: 1px solid #1e1e1e;
+        background-color: transparent;
+        @include tablet() {  
+            padding: 0 35px;                 
+        }
+
+        &:hover {
+            color: #fff;
+            border: 1px solid #117ce9;
+            background-color: #117ce9;
+        }
+    }
+    &.type3 {
+        color: #fff;
+        background: #1e1e1e;
+        padding: 0 33px;
+        @include desktop() {     
+            padding: 0 43px 0 20px;            
+        }
+        @include tablet() {   
+            padding: 0 46px 0 29px;                 
+        }
+
+        &:hover {
+            background-color: #fff;
+            color: #1e1e1e;
+        }
+    }
+}
