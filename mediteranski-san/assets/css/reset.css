@@ -1,0 +1,53 @@
+*{margin:0;padding:0;font:inherit;color:inherit;}
+*, :after, :before {box-sizing:border-box;}
+html, body {height:100%;}
+img, picture, video, canvas, svg {display: block;max-width:100%;}
+button {background:none;border:0;cursor:pointer;}
+a {text-decoration:none; cursor: pointer;}
+table {border-collapse:collapse;border-spacing:0}
+ul{list-style: none;}
+fieldset,input{border: 0;}
+
+@font-face {
+	font-family: 'PPNEUEMONTREAL';
+    src: url('../fonts/PPNEUEMONTREAL.otf') format("opentype");
+    font-weight: 300;
+}
+@font-face {
+	font-family: 'PPRIGHTDIDONE';
+    src: url('../fonts/PPRIGHTDIDONE.otf') format("opentype");
+    font-weight: 300;
+}
+
+:root {
+    --light-beige: #dbd7d2;
+    --dreamy-green: #303026;
+    --black: #211d1a;
+    --borders: #464734;
+    --sand: #c7b09b;
+    --light-grey: #f2f1f0;
+    --white: white;
+    --dark-beige: #ccc9c4
+}
+
+body {
+    font-family: PPRIGHTDIDONE, sans-serif;
+    font-size: 14px;
+    color: var(--black);
+    background-color: var(--light-grey);
+    font-weight: 300;
+}
+
+/* 스크롤바 */
+::-webkit-scrollbar {
+    width: 6px; /* 스크롤바의 너비 */
+}
+    
+::-webkit-scrollbar-track {
+    background: var(--light-grey); /* 스크롤바의 바탕색 */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #000; /* 스크롤바의 색상 */
+}
+

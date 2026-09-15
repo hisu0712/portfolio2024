@@ -1,0 +1,50 @@
+.blind {
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0,0,0,0);
+    overflow: hidden;
+}
+
+h2.title {
+    font-family: PPNEUEMONTREAL, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+h2.title::before {
+    content: '';
+    display: block;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    background-color: var(--black);
+}
+
+.btn-wrap {
+    position: relative;
+    display: inline-block;
+}
+button.btn-contact {
+    font-family: PPNEUEMONTREAL,sans-serif;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+button.btn-contact::after {
+    content: '';
+    display: block;
+    background-image: url(../images/arrow_black.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    width: 19px;
+    height: 20px;
+}
+.btn-wrap .before-line, .btn-wrap .line {
+    position: absolute;
+    bottom: -4px;
+    background-color: var(--black);
+    height: 1px;
+    width: 100%;
+}
